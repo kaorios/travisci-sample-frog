@@ -8,7 +8,7 @@ export function throttle (callback) {
   return (...args) => {
     cancelAnimationFrame(handle);
     handle = requestAnimationFrame(() => {
-      callback(...args)
+      callback(...args);
     });
   };
 }
